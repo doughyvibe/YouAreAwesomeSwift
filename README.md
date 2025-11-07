@@ -1,16 +1,17 @@
-# SwiftUI Button Example
+# SwiftUI Concepts App
 
-A simple project where I'm learning how to create buttons using SwiftUI.
+Today I'm bringing together everything I've learned plus new concepts:
+- SwiftUI Constants and proper scope management
+- Understanding variable visibility and lifecycle
+- The One Button Conditional Challenge
 
-## Today's Learning Goal
-- Creating basic buttons in SwiftUI
-- Styling buttons with different modifiers
-- Handling button actions and interactions
+## What I'm Building
+A consolidated app that demonstrates:
+- Button creation and styling
+- State management with proper scope
+- Conditional UI changes using a single button
+- Organized code structure with constants
 
-## Project Overview
-This contains my first experiments with SwiftUI buttons, including different styles and functionalities.
+This represents my growing understanding of SwiftUI fundamentals and code organization!
 
-## Getting Started
-Open the project in Xcode and run it on a simulator or device to see the buttons in action.
-
-<img width="221" height="431" alt="Screenshot 2025-11-07 at 6 28 23 PM" src="https://github.com/user-attachments/assets/44c19ebb-c520-4755-91e3-83e87485a8c1" />
+<img width="278" height="526" alt="image" src="https://github.com/user-attachments/assets/f984e935-a371-430e-b5ed-24dadb13c170" />
