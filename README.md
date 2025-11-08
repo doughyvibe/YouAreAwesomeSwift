@@ -1,15 +1,14 @@
-# SwiftUI Images & Asset Catalog
+# Swift Data Types & Type Safety
 
-Today I learned how to:
-- Add images to the Asset Catalog in Xcode
-- Organize assets using folders in the catalog
-- Incorporate images into SwiftUI views
-- Display and style images in my app
+Today I learned about fundamental Swift data types and type management:
 
-## What I Built
-An app that demonstrates proper image management and organization in SwiftUI using the Asset Catalog.
+## Concepts Covered
+- **Basic Types**: String, Bool, Int, and Double
+- **Type Conversion**: Converting between different types
+- **Type Declaration**: Implicit vs. Explicit type annotation
+- **Error Handling**: Common type errors and how to fix them
 
-## Key Learnings
-- Asset Catalog organization with folders
-- Loading and displaying images in SwiftUI
-- Image resizing and styling techniques
+## Practice Focus
+Understanding Swift's strong type system and learning to work with different data types effectively.
+
+Building a solid foundation in Swift's type safety principles!
