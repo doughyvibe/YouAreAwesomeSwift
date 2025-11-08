@@ -9,20 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var message = ""
-    @State private var imageView = ""
+    @State private var imageName = ""
     
     var body: some View {
         VStack {
             Spacer()
             
-            Image(systemName: imageView)
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .shadow(radius: 30)
             
             Text(message)
-                .foregroundStyle(.black)
-                .fontWeight(.thin)
+                .foregroundStyle(.red)
+                .fontWeight(.heavy)
                 .font(.largeTitle)
             
             Spacer()
@@ -31,32 +32,34 @@ struct ContentView: View {
                 
                 let message1 = "You are awesome!"
                 let message2 = "You are Great!"
-                let img1 = "sun.max.fill"
-                let img2 = "hand.thumbsup"
-//                if message == message1 {
-//                    imageView = img1
-//                    message = message2
-//                } else {
-//                    imageView = img2
-//                    message = message1
-//                 }
+                //                let img1 = "sun.max.fill"
+                //                let img2 = "hand.thumbsup"
+                //                if message == message1 {
+                //                    imageView = img1
+                //                    message = message2
+                //                } else {
+                //                    imageView = img2
+                //                    message = message1
+                //                 }
                 //Ternary operator
-//                message = (message == message1 ? message2 : message1)
-//                imageView = (imageView == img1 ? img2 : img1)
+                message = (message == message1 ? message2 : message1)
+                imageName = (imageName == "image0" ? "image1" : "image0")
                 
                 //Switch case++
                 
-                switch message {
-                case message1:
-                    imageView = img2
-                    message = message2
-                default:
-                    imageView = img1
-                    message = message1
-                }
+//                switch message {
+//                case message2:
+//                    imageName = "image0"
+//                    message = message1
+//                default:
+//                    imageName = "image1"
+//                    message = message2
+                
+//                }
+                
                 
             }.buttonStyle(.borderedProminent)
-                .tint(.orange)
+                .font(.title2)
         }
         
     }
@@ -65,3 +68,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
