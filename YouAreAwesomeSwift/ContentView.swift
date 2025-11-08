@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var message = ""
     @State private var imageName = ""
     @State private var imageNumber = 0
+    @State private var mNumber = 0
     
     var body: some View {
         VStack {
@@ -26,47 +27,33 @@ struct ContentView: View {
                 .foregroundStyle(.red)
                 .fontWeight(.heavy)
                 .font(.largeTitle)
+                .multilineTextAlignment(.center)
+            
             
             Spacer()
             
             Button("TADA!") {
+                let messages = ["You are awesome!",
+                                "You are Great!",
+                                "You are Genius!" ,
+                                "You are Fattest Man Alive!",
+                                "Wow!"]
                 
-                let message1 = "You are awesome!"
-                let message2 = "You are Great!"
-                //                let img1 = "sun.max.fill"
-                //                let img2 = "hand.thumbsup"
-                //                if message == message1 {
-                //                    imageView = img1
-                //                    message = message2
-                //                } else {
-                //                    imageView = img2
-                //                    message = message1
-                //                 }
-                //Ternary operator
-                message = (message == message1 ? message2 : message1)
-//                imageName = (imageName == "image0" ? "image1" : "image0")
-//                imageName = "image" + String(imageNumber)
+                message = messages[mNumber]
                 
-            
+                mNumber += 1
+                if mNumber == messages.count {
+                    mNumber = 0
+                }
+                
+                
                 imageName = "image\(imageNumber)"
 
                 imageNumber += 1
                 if imageNumber > 9 {
                     imageNumber = 0
                 }
-                
-                
-                //Switch case++
-                
-//                switch message {
-//                case message2:
-//                    imageName = "image0"
-//                    message = message1
-//                default:
-//                    imageName = "image1"
-//                    message = message2
-                
-//                }
+
             
             }.buttonStyle(.borderedProminent)
                 .font(.title2)
