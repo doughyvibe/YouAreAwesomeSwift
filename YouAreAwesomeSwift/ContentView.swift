@@ -67,8 +67,7 @@ struct ContentView: View {
 //                    message = message2
                 
 //                }
-                
-                
+            
             }.buttonStyle(.borderedProminent)
                 .font(.title2)
         }
