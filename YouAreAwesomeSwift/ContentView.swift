@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var message = ""
     @State private var imageName = ""
+    @State private var imageNumber = 0
     
     var body: some View {
         VStack {
@@ -28,7 +29,7 @@ struct ContentView: View {
             
             Spacer()
             
-            Button("Press me!") {
+            Button("TADA!") {
                 
                 let message1 = "You are awesome!"
                 let message2 = "You are Great!"
@@ -43,7 +44,17 @@ struct ContentView: View {
                 //                 }
                 //Ternary operator
                 message = (message == message1 ? message2 : message1)
-                imageName = (imageName == "image0" ? "image1" : "image0")
+//                imageName = (imageName == "image0" ? "image1" : "image0")
+//                imageName = "image" + String(imageNumber)
+                
+            
+                imageName = "image\(imageNumber)"
+
+                imageNumber += 1
+                if imageNumber > 9 {
+                    imageNumber = 0
+                }
+                
                 
                 //Switch case++
                 
