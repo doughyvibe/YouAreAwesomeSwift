@@ -1,17 +1,15 @@
-# SwiftUI Concepts App
+# SwiftUI Images & Asset Catalog
 
-Today I'm bringing together everything I've learned plus new concepts:
-- SwiftUI Constants and proper scope management
-- Understanding variable visibility and lifecycle
-- The One Button Conditional Challenge
+Today I learned how to:
+- Add images to the Asset Catalog in Xcode
+- Organize assets using folders in the catalog
+- Incorporate images into SwiftUI views
+- Display and style images in my app
 
-## What I'm Building
-A consolidated app that demonstrates:
-- Button creation and styling
-- State management with proper scope
-- Conditional UI changes using a single button
-- Organized code structure with constants
+## What I Built
+An app that demonstrates proper image management and organization in SwiftUI using the Asset Catalog.
 
-This represents my growing understanding of SwiftUI fundamentals and code organization!
-
-<img width="278" height="526" alt="image" src="https://github.com/user-attachments/assets/f984e935-a371-430e-b5ed-24dadb13c170" />
+## Key Learnings
+- Asset Catalog organization with folders
+- Loading and displaying images in SwiftUI
+- Image resizing and styling techniques
