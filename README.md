@@ -1,14 +1,14 @@
-# Swift Loops & Logic Enhancement
+# Swift Functions & Control Flow
 
-Today I learned about loops and applied them to improve my app's logic:
+Today I learned about functions and advanced control flow in Swift:
 
 ## Concepts Covered
-- **While loops** and **Repeat-While loops**
-- Explicit variable declarations
-- Avoiding common loop errors
-- Randomization without repetition
+- **Functions**: No parameter, multi-parameter, and return value functions
+- **Syntax Optimization**: Removing `return` in single-expression functions
+- **Guard Statements**: Early exit pattern for cleaner code
+- **Advanced Switch Cases**: Using ranges in switch statements
 
-## App Enhancement
-Applied loop knowledge to ensure the app never shows the same image or message twice in a row, creating a better user experience.
+## Skills Applied
+Writing more organized, safe, and efficient Swift code with proper error handling and control flow.
 
-Building smarter, more dynamic SwiftUI apps!
+Leveling up my Swift programming fundamentals!

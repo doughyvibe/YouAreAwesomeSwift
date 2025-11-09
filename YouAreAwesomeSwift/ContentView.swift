@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct ContentView: View {
     @State private var message = ""
     @State private var imageName = ""
-    @State private var imageNumber = 0
-    @State private var mNumber = 0
     @State private var lastMessageNumber = -1
     @State private var lastImageNumber = -1
+    @State private var lastSoundNum = -1
+    @State private var audioPlayer: AVAudioPlayer!
+    let numOfImg = 10 // image0 - image9
+    let numOfSound = 6
     
     var body: some View {
         VStack {
@@ -43,17 +46,6 @@ struct ContentView: View {
                                 "You are Genius!" ,
                                 "Wow!"]
                 
-//                let lastMessageNumber = message
-//                
-//                repeat {
-//                    message = messages[Int.random(in: 0..<messages.count)]
-//                } while message == lastMessageNumber
-//                
-//                let lastImageNumber = imageName
-//                
-//                repeat {
-//                    imageName = "image\(Int.random(in: 0...9))"
-//                } while imageName == lastImageNumber
                 
                 var messageNumber: Int
                 
@@ -67,11 +59,28 @@ struct ContentView: View {
                 var imageNumber: Int
                 
                 repeat {
-                    imageNumber = Int.random(in: 0...9)
+                    imageNumber = Int.random(in: 0...numOfImg-1)
                 } while imageNumber == lastImageNumber
                 
-                lastImageNumber = imageNumber
                 imageName = "image\(imageNumber)"
+                lastImageNumber = imageNumber
+                
+                var soundNum: Int
+                repeat {
+                    soundNum = Int.random(in: 0...numOfSound-1)
+                } while soundNum == lastSoundNum
+                
+                let soundName = "sound\(soundNum)"
+                lastSoundNum = soundNum
+                
+                guard let soundFile = NSDataAsset(name: soundName) else {
+                    print("😘 You're lost! Can't identify \(soundName)")
+                    return }
+                
+                do { audioPlayer = try AVAudioPlayer(data: soundFile.data)
+                     audioPlayer.play()
+                } catch { print("Error: \(error.localizedDescription)")
+                }
                 
 
             
